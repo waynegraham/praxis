@@ -1,4 +1,4 @@
-# An incredibly retarded way of solving this problem using classes
+# An incredibly idiotic way of solving this problem using classes
 
 class Fibo
   def initialize(max)
