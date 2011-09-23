@@ -50,12 +50,12 @@ local = Fibo.new(max.to_i)
 stack = local.stack
 pair = local.pair
 total = local.total
-puts "The list of fibonacci numbers below " + local.maximum + " is:"
+puts "The list of fibonacci numbers below or equal to " + local.maximum + " is:"
 puts stack.join(", ")
 puts
-puts "The list of even fibonacci numbers below " + local.maximum + " is:"
+puts "The list of even fibonacci numbers below or equal to " + local.maximum + " is:"
 puts pair.join(", ")
 puts
 puts "The sum of all the even fibonacci numbers is:"
 puts total
-
+puts
