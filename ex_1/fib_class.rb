@@ -1,6 +1,6 @@
 # An incredibly retarded way of solving this problem using classes
 
-class FiboPairs
+class Fibo
   def initialize(max)
     @max = max
     @fib = [0,1]
@@ -19,7 +19,6 @@ class FiboPairs
   end
 
   def pair
-    stack
     @fib.each do |val|
       if val.remainder(2) == 0
         @even << val
@@ -29,8 +28,9 @@ class FiboPairs
   end
 
   def total
-    pair
-    @sum = @even.inject(:+)
+    @even.each do |num|
+      @sum = @sum + num
+    end
     @sum
   end
 
@@ -43,12 +43,19 @@ class FiboPairs
   end
 end
 
-big = FiboPairs.new(4000000)
-puts "The list of fibonacci numbers below " + big.maximum + " is:"
-puts big.stack.join(", ")
+puts "Enter a number below:"
+max = gets.chomp
 puts
-puts "The list of even fibonacci numbers below " + big.maximum + " is:"
-puts big.pair.join(", ")
+local = Fibo.new(max.to_i)
+stack = local.stack
+pair = local.pair
+total = local.total
+puts "The list of fibonacci numbers below " + local.maximum + " is:"
+puts stack.join(", ")
+puts
+puts "The list of even fibonacci numbers below " + local.maximum + " is:"
+puts pair.join(", ")
 puts
 puts "The sum of all the even fibonacci numbers is:"
-puts big.total
+puts total
+
