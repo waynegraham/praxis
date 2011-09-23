@@ -28,7 +28,7 @@ class FiboPairs
     @even
   end
 
-  def sum
+  def total
     pair
     @sum = @even.inject(:+)
     @sum
@@ -49,3 +49,6 @@ puts big.stack.join(", ")
 puts
 puts "The list of even fibonacci numbers below " + big.maximum + " is:"
 puts big.pair.join(", ")
+puts
+puts "The sum of all the even fibonacci numbers is:"
+puts big.total
