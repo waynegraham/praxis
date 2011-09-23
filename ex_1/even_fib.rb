@@ -1,4 +1,4 @@
-max = 4000
+max = 4000000
 fib = [0, 1]
 
 while fib[-1]<=max
@@ -13,5 +13,5 @@ fib.each do |val|
 end
 sum = even.inject(:+)
 
-puts "The sum is " + sum.to_s    
-    
+puts "The sum is " + sum.to_s
+
