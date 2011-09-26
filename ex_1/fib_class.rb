@@ -1,6 +1,11 @@
 # An incredibly idiotic way of solving this problem using classes
 
 class Fibo
+  attr_accessor :max
+  attr_accessor :fib
+  attr_accessor :even
+  attr_accessor :sum
+
   def initialize(max)
     @max = max
     @fib = [0,1]
@@ -47,9 +52,9 @@ puts "Enter a number below:"
 max = gets.chomp
 puts
 local = Fibo.new(max.to_i)
-stack = local.stack
-pair = local.pair
-total = local.total
+local.stack
+local.pair
+local.total
 puts "The list of fibonacci numbers below or equal to " + local.maximum + " is:"
 puts stack.join(", ")
 puts
